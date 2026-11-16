@@ -474,10 +474,10 @@
             if (!nombre) { document.getElementById('error-nombre').textContent = 'Campo obligatorio'; document.getElementById('nombre').classList.add('error'); errores = true; }
             if (!apellidos) { document.getElementById('error-apellidos').textContent = 'Campo obligatorio'; document.getElementById('apellidos').classList.add('error'); errores = true; }
             if (!dni) { document.getElementById('error-dni').textContent = 'Campo obligatorio'; document.getElementById('dni').classList.add('error'); errores = true; }
-            
-            const regexTel = /^\\d+$/;
+           
+            const regexTel = /^\d{9}$/;
             if (!telefono || !regexTel.test(telefono)) {
-                document.getElementById('error-telefono').textContent = 'Solo números permitidos';
+                document.getElementById('error-telefono').textContent = "9 dígitos (ej. 600123456)";
                 document.getElementById('telefono').classList.add('error');
                 errores = true;
             }
@@ -535,4 +535,3 @@
     </script>
 </body>
 </html>
-
